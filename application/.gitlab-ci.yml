@@ -1,5 +1,6 @@
 stages:
     - test
+    - deploy
 run_test:
     stage: test
     image: python:3.9-slim
