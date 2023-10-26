@@ -2,6 +2,9 @@ stages:
     - test
 run_test:
     stage: test
+    image: python:3.9-slim
+    before_script:
+        - apt-get update && apt-get install make
     script:
         - python3 manage.py test
     
