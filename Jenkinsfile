@@ -3,7 +3,8 @@ node {
     checkout scm
   }
   stage('Test') {
-    echo 'Application Testing'
+    sh 'source /var/lib/jenkins/workspace/django_project/project_env/bin/activate
+    echo 'python3 manage.py test'
   }
   stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarScanner';
