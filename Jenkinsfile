@@ -3,7 +3,7 @@ node {
     checkout scm
   }
   stage('Test') {
-    sh '/var/lib/jenkins/workspace/django_project/project_env/bin/activate'
+    sh 'source /var/lib/jenkins/workspace/django_project/project_env/bin/activate'
     sh 'python3 manage.py test'
   }
   stage('SonarQube Analysis') {
