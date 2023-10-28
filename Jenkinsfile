@@ -4,7 +4,7 @@ node {
   }
   stage('Test') {
     sh '''#!/bin/bash
-    cd /var/lib/jenkins/workspace/django_project/project_env/bin/activate'''
+    source /var/lib/jenkins/workspace/django_project/project_env/bin/activate'''
   }
   stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarScanner'
